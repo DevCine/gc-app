@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/08/03 10:21:07.013,=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/08/03 10:21:51.004,C:\Yacine\Yacine\app gestion\app\Unit1.dfm=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/08/03 10:21:51.004,C:\Yacine\Yacine\app gestion\app\Unit1.pas=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/08/03 10:22:30.131,C:\Yacine\Yacine\app gestion\app\MYGC.dproj=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/08/03 13:18:28.034,C:\Yacine\Yacine\app gestion\app\fournisseur_u.dfm=C:\Yacine\Yacine\app gestion\app\Unit1.dfm</Transaction>
+    <Transaction>2022/08/03 13:18:28.034,C:\Yacine\Yacine\app gestion\app\fournisseur_u.pas=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
