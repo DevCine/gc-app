@@ -488,6 +488,7 @@ object fournisseur_f: Tfournisseur_f
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
       'fo=False;Initial Catalog=bddcommerce;Data Source=DESKTOP-M9OQ1ML' +
       '\SQLEXPRESS'
+    LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 608
     Top = 664
