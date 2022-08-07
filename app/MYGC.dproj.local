@@ -2,32 +2,32 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2022/08/03 10:21:07.000.013,=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/08/03 10:21:51.000.004,C:\Yacine\Yacine\app gestion\app\Unit1.dfm=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2022/08/03 10:21:51.000.004,C:\Yacine\Yacine\app gestion\app\Unit1.pas=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
-    <Transaction>2022/08/03 10:22:30.000.131,C:\Yacine\Yacine\app gestion\app\MYGC.dproj=C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/08/03 13:18:28.000.034,C:\Yacine\Yacine\app gestion\app\fournisseur_u.pas=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/03 13:18:28.000.034,C:\Yacine\Yacine\app gestion\app\fournisseur_u.dfm=C:\Yacine\Yacine\app gestion\app\Unit1.dfm</Transaction>
+    <Transaction>2022/08/03 10:21:51.000.004,C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
+    <Transaction>2022/08/03 10:21:51.000.004,C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Yacine\Yacine\app gestion\app\Unit1.dfm</Transaction>
+    <Transaction>2022/08/03 10:22:30.000.131,C:\Users\mohbb\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Yacine\Yacine\app gestion\app\MYGC.dproj</Transaction>
+    <Transaction>2022/08/03 13:18:28.000.034,C:\Yacine\Yacine\app gestion\app\Unit1.pas=C:\Yacine\Yacine\app gestion\app\fournisseur_u.pas</Transaction>
+    <Transaction>2022/08/03 13:18:28.000.034,C:\Yacine\Yacine\app gestion\app\Unit1.dfm=C:\Yacine\Yacine\app gestion\app\fournisseur_u.dfm</Transaction>
     <Transaction>2022/08/05 09:05:54.000.453,=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/05 09:06:56.000.662,C:\Yacine\Yacine\app gestion\app\Unit1.pas=C:\Yacine\Yacine\app gestion\app\liste_frnsr.pas</Transaction>
-    <Transaction>2022/08/05 09:06:56.000.662,C:\Yacine\Yacine\app gestion\app\Unit1.dfm=C:\Yacine\Yacine\app gestion\app\liste_frnsr.dfm</Transaction>
-    <Transaction>2022/08/05 09:52:15.000.195,C:\Yacine\Yacine\app gestion\app\liste_frnsr.dfm=C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.dfm</Transaction>
-    <Transaction>2022/08/05 09:52:15.000.195,C:\Yacine\Yacine\app gestion\app\liste_frnsr.pas=C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.pas</Transaction>
-    <Transaction>2022/08/05 09:52:31.000.146,C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.dfm=C:\Yacine\Yacine\app gestion\app\liste_des_frnsr.dfm</Transaction>
-    <Transaction>2022/08/05 09:52:31.000.146,C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.pas=C:\Yacine\Yacine\app gestion\app\liste_des_frnsr.pas</Transaction>
+    <Transaction>2022/08/05 09:06:56.000.662,C:\Yacine\Yacine\app gestion\app\liste_frnsr.pas=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
+    <Transaction>2022/08/05 09:06:56.000.662,C:\Yacine\Yacine\app gestion\app\liste_frnsr.dfm=C:\Yacine\Yacine\app gestion\app\Unit1.dfm</Transaction>
+    <Transaction>2022/08/05 09:52:15.000.195,C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.dfm=C:\Yacine\Yacine\app gestion\app\liste_frnsr.dfm</Transaction>
+    <Transaction>2022/08/05 09:52:15.000.195,C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.pas=C:\Yacine\Yacine\app gestion\app\liste_frnsr.pas</Transaction>
+    <Transaction>2022/08/05 09:52:31.000.146,C:\Yacine\Yacine\app gestion\app\liste_des_frnsr.dfm=C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.dfm</Transaction>
+    <Transaction>2022/08/05 09:52:31.000.146,C:\Yacine\Yacine\app gestion\app\liste_des_frnsr.pas=C:\Yacine\Yacine\app gestion\app\liste_de_frnsr.pas</Transaction>
     <Transaction>2022/08/06 20:54:21.000.460,=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/06 20:55:49.000.637,C:\Yacine\Yacine\app gestion\app\liste_des_clients.pas=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/06 20:55:49.000.637,C:\Yacine\Yacine\app gestion\app\liste_des_clients.dfm=C:\Yacine\Yacine\app gestion\app\Unit1.dfm</Transaction>
+    <Transaction>2022/08/06 20:55:49.000.637,C:\Yacine\Yacine\app gestion\app\Unit1.pas=C:\Yacine\Yacine\app gestion\app\liste_des_clients.pas</Transaction>
+    <Transaction>2022/08/06 20:55:49.000.637,C:\Yacine\Yacine\app gestion\app\Unit1.dfm=C:\Yacine\Yacine\app gestion\app\liste_des_clients.dfm</Transaction>
     <Transaction>2022/08/07 09:45:08.000.799,=C:\Yacine\Yacine\app gestion\app\Unit2.pas</Transaction>
     <Transaction>2022/08/07 09:45:33.000.763,=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/07 09:46:06.000.073,C:\Yacine\Yacine\app gestion\app\Unit2.pas=C:\Yacine\Yacine\app gestion\app\database.pas</Transaction>
-    <Transaction>2022/08/07 09:46:06.000.073,C:\Yacine\Yacine\app gestion\app\Unit2.dfm=C:\Yacine\Yacine\app gestion\app\database.dfm</Transaction>
+    <Transaction>2022/08/07 09:46:06.000.073,C:\Yacine\Yacine\app gestion\app\database.dfm=C:\Yacine\Yacine\app gestion\app\Unit2.dfm</Transaction>
+    <Transaction>2022/08/07 09:46:06.000.073,C:\Yacine\Yacine\app gestion\app\database.pas=C:\Yacine\Yacine\app gestion\app\Unit2.pas</Transaction>
     <Transaction>2022/08/07 10:32:27.000.894,=C:\Yacine\Yacine\app gestion\app\Unit2.pas</Transaction>
-    <Transaction>2022/08/07 10:33:17.000.821,C:\Yacine\Yacine\app gestion\app\Unit2.dfm=C:\Yacine\Yacine\app gestion\app\fiche_client.dfm</Transaction>
-    <Transaction>2022/08/07 10:33:17.000.821,C:\Yacine\Yacine\app gestion\app\Unit2.pas=C:\Yacine\Yacine\app gestion\app\fiche_client.pas</Transaction>
-    <Transaction>2022/08/07 12:13:15.122,=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/07 12:13:34.209,C:\Yacine\Yacine\app gestion\app\fiche_produits.dfm=C:\Yacine\Yacine\app gestion\app\Unit1.dfm</Transaction>
-    <Transaction>2022/08/07 12:13:34.209,C:\Yacine\Yacine\app gestion\app\fiche_produits.pas=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
-    <Transaction>2022/08/07 12:14:41.343,C:\Yacine\Yacine\app gestion\app\fiche_produit.pas=C:\Yacine\Yacine\app gestion\app\fiche_produits.pas</Transaction>
-    <Transaction>2022/08/07 12:14:41.343,C:\Yacine\Yacine\app gestion\app\fiche_produit.dfm=C:\Yacine\Yacine\app gestion\app\fiche_produits.dfm</Transaction>
+    <Transaction>2022/08/07 10:33:17.000.821,C:\Yacine\Yacine\app gestion\app\fiche_client.pas=C:\Yacine\Yacine\app gestion\app\Unit2.pas</Transaction>
+    <Transaction>2022/08/07 10:33:17.000.821,C:\Yacine\Yacine\app gestion\app\fiche_client.dfm=C:\Yacine\Yacine\app gestion\app\Unit2.dfm</Transaction>
+    <Transaction>2022/08/07 12:13:15.000.122,=C:\Yacine\Yacine\app gestion\app\Unit1.pas</Transaction>
+    <Transaction>2022/08/07 12:13:34.000.209,C:\Yacine\Yacine\app gestion\app\Unit1.dfm=C:\Yacine\Yacine\app gestion\app\fiche_produits.dfm</Transaction>
+    <Transaction>2022/08/07 12:13:34.000.209,C:\Yacine\Yacine\app gestion\app\Unit1.pas=C:\Yacine\Yacine\app gestion\app\fiche_produits.pas</Transaction>
+    <Transaction>2022/08/07 12:14:41.000.343,C:\Yacine\Yacine\app gestion\app\fiche_produits.dfm=C:\Yacine\Yacine\app gestion\app\fiche_produit.dfm</Transaction>
+    <Transaction>2022/08/07 12:14:41.000.343,C:\Yacine\Yacine\app gestion\app\fiche_produits.pas=C:\Yacine\Yacine\app gestion\app\fiche_produit.pas</Transaction>
   </Transactions>
 </BorlandProject>
