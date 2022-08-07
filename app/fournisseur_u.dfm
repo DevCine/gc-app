@@ -1,7 +1,7 @@
-object fournisseur_f: Tfournisseur_f
+object fournisseur_frm: Tfournisseur_frm
   Left = 0
   Top = 0
-  Caption = 'fournisseur_f'
+  Caption = 'fournisseur_frm'
   ClientHeight = 738
   ClientWidth = 985
   Color = clBtnFace
@@ -301,7 +301,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'code_f'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
@@ -310,7 +310,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'nom'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
@@ -319,7 +319,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'adresse_f'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 2
     end
   end
@@ -358,7 +358,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'tel_f'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 0
     end
     object DBEdit5: TDBEdit
@@ -367,7 +367,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'email_f'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 1
     end
   end
@@ -406,7 +406,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'sold_init_f'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 0
     end
     object DBEdit7: TDBEdit
@@ -415,7 +415,7 @@ object fournisseur_f: Tfournisseur_f
       Width = 225
       Height = 25
       DataField = 'sold_fin_f'
-      DataSource = DataSource1
+      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 1
     end
   end
@@ -481,54 +481,5 @@ object fournisseur_f: Tfournisseur_f
     Caption = 'Enregistrer'
     TabOrder = 9
     OnClick = Button7Click
-  end
-  object ADOConnection1: TADOConnection
-    Connected = True
-    ConnectionString = 
-      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=bddcommerce;Data Source=DESKTOP-M9OQ1ML' +
-      '\SQLEXPRESS'
-    LoginPrompt = False
-    Provider = 'SQLOLEDB.1'
-    Left = 608
-    Top = 664
-  end
-  object ADOTable1: TADOTable
-    Active = True
-    Connection = ADOConnection1
-    CursorType = ctStatic
-    TableName = 'fournisseur'
-    Left = 704
-    Top = 664
-    object ADOTable1code_f: TIntegerField
-      FieldName = 'code_f'
-    end
-    object ADOTable1nom: TWideStringField
-      FieldName = 'nom'
-      Size = 50
-    end
-    object ADOTable1adresse_f: TWideStringField
-      FieldName = 'adresse_f'
-      Size = 50
-    end
-    object ADOTable1tel_f: TStringField
-      FieldName = 'tel_f'
-      Size = 21
-    end
-    object ADOTable1email_f: TStringField
-      FieldName = 'email_f'
-      Size = 30
-    end
-    object ADOTable1sold_init_f: TFloatField
-      FieldName = 'sold_init_f'
-    end
-    object ADOTable1sold_fin_f: TFloatField
-      FieldName = 'sold_fin_f'
-    end
-  end
-  object DataSource1: TDataSource
-    DataSet = ADOTable1
-    Left = 800
-    Top = 664
   end
 end

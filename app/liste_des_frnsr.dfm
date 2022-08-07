@@ -31,7 +31,7 @@ object liste_frnsr: Tliste_frnsr
     Width = 1041
     Height = 537
     Align = alCustom
-    DataSource = fournisseur_f.DataSource1
+    DataSource = DataSourceFrnsr
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -151,7 +151,7 @@ object liste_frnsr: Tliste_frnsr
       Left = 456
       Top = 40
       Width = 185
-      Height = 40
+      Height = 23
       TabOrder = 0
       OnChange = SearchBox2Change
     end
@@ -159,9 +159,14 @@ object liste_frnsr: Tliste_frnsr
       Left = 128
       Top = 40
       Width = 185
-      Height = 40
+      Height = 23
       TabOrder = 1
       OnChange = SearchBox1Change
     end
+  end
+  object DataSourceFrnsr: TDataSource
+    DataSet = db.ADOfournisseur
+    Left = 32
+    Top = 8
   end
 end
