@@ -1,4 +1,4 @@
-object client_frm: Tclient_frm
+object frmClient: TfrmClient
   Left = 0
   Top = 0
   Caption = 'Fiche Client'
@@ -80,7 +80,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 25
       DataField = 'code_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
@@ -89,7 +89,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 25
       DataField = 'nom_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
@@ -98,7 +98,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 25
       DataField = 'adresse_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 2
     end
   end
@@ -137,7 +137,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 23
       DataField = 'tel_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 0
     end
     object DBEdit5: TDBEdit
@@ -146,7 +146,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 23
       DataField = 'email_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 1
     end
   end
@@ -185,7 +185,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 23
       DataField = 'sold_init_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 0
     end
     object DBEdit7: TDBEdit
@@ -194,7 +194,7 @@ object client_frm: Tclient_frm
       Width = 225
       Height = 23
       DataField = 'sold_fin_c'
-      DataSource = liste_client.DataSourceClient
+      DataSource = frmListClients.DataSourceClient
       TabOrder = 1
     end
   end

@@ -1,4 +1,4 @@
-object produit_frm: Tproduit_frm
+object frmProduit: TfrmProduit
   Left = 0
   Top = 0
   Caption = 'Fiche Produit'
@@ -27,8 +27,8 @@ object produit_frm: Tproduit_frm
   end
   object PageControl1: TPageControl
     Left = 32
-    Top = 102
-    Width = 1081
+    Top = 94
+    Width = 865
     Height = 657
     ActivePage = TabSheet2
     Font.Charset = DEFAULT_CHARSET
@@ -39,20 +39,12 @@ object produit_frm: Tproduit_frm
     ParentFont = False
     TabHeight = 25
     TabOrder = 0
-    TabWidth = 100
+    TabWidth = 120
     object TabSheet1: TTabSheet
       Caption = 'Description'
-      object Label7: TLabel
-        Left = 48
-        Top = 415
-        Width = 51
-        Height = 23
-        Caption = 'code_s'
-        FocusControl = DBEdit7
-      end
       object Label6: TLabel
-        Left = 41
-        Top = 352
+        Left = 52
+        Top = 355
         Width = 96
         Height = 23
         Caption = 'Expir'#233' dans :'
@@ -102,64 +94,55 @@ object produit_frm: Tproduit_frm
         Left = 168
         Top = 64
         Width = 329
-        Height = 23
+        Height = 31
         DataField = 'ref'
-        DataSource = DataSourceproduit
+        DataSource = db.DataSourceproduit
         TabOrder = 0
-      end
-      object DBEdit7: TDBEdit
-        Left = 168
-        Top = 412
-        Width = 329
-        Height = 23
-        DataField = 'code_s'
-        DataSource = DataSourceproduit
-        TabOrder = 1
       end
       object DBEdit6: TDBEdit
         Left = 168
         Top = 352
         Width = 145
-        Height = 23
+        Height = 31
         DataField = 'date_produit'
-        DataSource = DataSourceproduit
-        TabOrder = 2
+        DataSource = db.DataSourceproduit
+        TabOrder = 1
       end
       object DBEdit5: TDBEdit
         Left = 168
         Top = 293
         Width = 329
-        Height = 23
+        Height = 31
         DataField = 'marque'
-        DataSource = DataSourceproduit
-        TabOrder = 3
+        DataSource = db.DataSourceproduit
+        TabOrder = 2
       end
       object DBEdit4: TDBEdit
         Left = 168
         Top = 229
         Width = 329
-        Height = 23
+        Height = 31
         DataField = 'famille'
-        DataSource = DataSourceproduit
-        TabOrder = 4
+        DataSource = db.DataSourceproduit
+        TabOrder = 3
       end
       object DBEdit3: TDBEdit
         Left = 168
         Top = 173
         Width = 329
-        Height = 23
+        Height = 31
         DataField = 'code_bare'
-        DataSource = DataSourceproduit
-        TabOrder = 5
+        DataSource = db.DataSourceproduit
+        TabOrder = 4
       end
       object DBEdit2: TDBEdit
         Left = 168
         Top = 125
         Width = 329
-        Height = 23
+        Height = 31
         DataField = 'd'#233'signation'
-        DataSource = DataSourceproduit
-        TabOrder = 6
+        DataSource = db.DataSourceproduit
+        TabOrder = 5
       end
     end
     object TabSheet2: TTabSheet
@@ -168,7 +151,7 @@ object produit_frm: Tproduit_frm
       object GroupBox1: TGroupBox
         Left = 16
         Top = 24
-        Width = 521
+        Width = 393
         Height = 281
         Caption = 'Prix Achat'
         TabOrder = 0
@@ -184,7 +167,7 @@ object produit_frm: Tproduit_frm
           Left = 88
           Top = 114
           Width = 39
-          Height = 26
+          Height = 23
           Caption = 'TVA :'
           FocusControl = DBEdit9
         end
@@ -207,27 +190,24 @@ object produit_frm: Tproduit_frm
           Left = 150
           Top = 55
           Width = 154
-          Height = 23
+          Height = 31
           DataField = 'prix_ht_cmnd'
-          DataSource = DataSourceQueryProduit
           TabOrder = 0
         end
         object DBEdit9: TDBEdit
           Left = 150
           Top = 111
           Width = 154
-          Height = 23
+          Height = 31
           DataField = 'tva_cmnd'
-          DataSource = DataSourceQueryProduit
           TabOrder = 1
         end
         object DBEdit10: TDBEdit
           Left = 150
           Top = 167
           Width = 154
-          Height = 23
+          Height = 31
           DataField = 'prix_ttc_cmnd'
-          DataSource = DataSourceQueryProduit
           TabOrder = 2
         end
         object DBLookupComboBox1: TDBLookupComboBox
@@ -236,36 +216,161 @@ object produit_frm: Tproduit_frm
           Width = 154
           Height = 31
           DataField = 'nom'
-          DataSource = DataSourceQueryProduit
+          DataSource = db.DataSourceproduit
           KeyField = 'nom'
           ListField = 'nom'
-          ListSource = DataSourcefournisseur
+          ListSource = db.DataSourceproduit
           TabOrder = 3
+        end
+        object Button3: TButton
+          Left = 323
+          Top = 224
+          Width = 38
+          Height = 33
+          Caption = '+'
+          TabOrder = 4
+          OnClick = Button3Click
         end
       end
       object GroupBox2: TGroupBox
-        Left = 560
+        Left = 424
         Top = 24
-        Width = 481
+        Width = 393
         Height = 281
-        Caption = 'Prix de vente'
+        Caption = 'Stock'
         TabOrder = 1
+        object Label13: TLabel
+          Left = 64
+          Top = 58
+          Width = 51
+          Height = 23
+          Caption = 'Initial :'
+          FocusControl = DBEdit11
+        end
+        object Label14: TLabel
+          Left = 56
+          Top = 114
+          Width = 57
+          Height = 23
+          Caption = 'Actuel :'
+          FocusControl = DBEdit12
+        end
+        object Label15: TLabel
+          Left = 64
+          Top = 184
+          Width = 45
+          Height = 23
+          Caption = 'Alert :'
+          FocusControl = DBEdit13
+        end
+        object DBEdit11: TDBEdit
+          Left = 160
+          Top = 55
+          Width = 154
+          Height = 31
+          DataField = 's_initial'
+          TabOrder = 0
+        end
+        object DBEdit12: TDBEdit
+          Left = 160
+          Top = 114
+          Width = 154
+          Height = 31
+          DataField = 's_actuel'
+          TabOrder = 1
+        end
+        object DBEdit13: TDBEdit
+          Left = 160
+          Top = 176
+          Width = 154
+          Height = 31
+          DataField = 'alert'
+          TabOrder = 2
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 16
+        Top = 304
+        Width = 801
+        Height = 297
+        Caption = 'Prix de vente'
+        TabOrder = 2
+        object Label16: TLabel
+          Left = 186
+          Top = 64
+          Width = 54
+          Height = 23
+          Caption = 'Prix HT'
+        end
+        object Label17: TLabel
+          Left = 400
+          Top = 64
+          Width = 61
+          Height = 23
+          Caption = 'Prix TTC'
+        end
+        object Label18: TLabel
+          Left = 592
+          Top = 64
+          Width = 49
+          Height = 23
+          Caption = 'Marge'
+        end
+        object Label19: TLabel
+          Left = 74
+          Top = 104
+          Width = 53
+          Height = 23
+          Caption = 'Detail :'
+        end
+        object Label20: TLabel
+          Left = 83
+          Top = 176
+          Width = 44
+          Height = 23
+          Caption = 'Gros :'
+        end
+        object DBEdit14: TDBEdit
+          Left = 150
+          Top = 104
+          Width = 154
+          Height = 31
+          DataField = 'prix_ht_livr'
+          TabOrder = 0
+        end
+        object DBEdit15: TDBEdit
+          Left = 352
+          Top = 104
+          Width = 154
+          Height = 31
+          DataField = 'prix_ttc_livr'
+          TabOrder = 1
+        end
+        object Edit1: TEdit
+          Left = 548
+          Top = 104
+          Width = 149
+          Height = 31
+          TabOrder = 2
+        end
       end
     end
   end
-  object DataSourceproduit: TDataSource
-    DataSet = db.ADOproduit
-    Left = 1100
-    Top = 13
+  object Button1: TButton
+    Left = 960
+    Top = 272
+    Width = 75
+    Height = 25
+    Caption = 'sauver'
+    TabOrder = 1
   end
-  object DataSourceQueryProduit: TDataSource
-    DataSet = db.ADOqueryProduit
-    Left = 952
-    Top = 16
-  end
-  object DataSourcefournisseur: TDataSource
-    DataSet = db.ADOfournisseur
-    Left = 784
-    Top = 8
+  object Button2: TButton
+    Left = 960
+    Top = 423
+    Width = 75
+    Height = 25
+    Caption = 'fermer'
+    TabOrder = 2
+    OnClick = Button2Click
   end
 end

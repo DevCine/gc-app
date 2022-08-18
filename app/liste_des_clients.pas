@@ -5,10 +5,10 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.WinXCtrls, Data.DB,
-  Data.Win.ADODB, Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls;
+  Data.Win.ADODB, Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls,dmDatabase;
 
 type
-  Tliste_client = class(TForm)
+  TfrmListClients = class(TForm)
     Label1: TLabel;
     GroupBox1: TGroupBox;
     Label2: TLabel;
@@ -31,13 +31,13 @@ type
   end;
 
 var
-  liste_client: Tliste_client;
+  frmListClients: TfrmListClients;
 
 implementation
-             uses fournisseur_u,database;
+             uses fiche_fournisseur;
 {$R *.dfm}
 
-procedure Tliste_client.SearchBox1Change(Sender: TObject);
+procedure TfrmListClients.SearchBox1Change(Sender: TObject);
 begin
             if trim(searchbox1.Text) = '' then  db.ADOclient.Filtered := false else
 begin
@@ -46,7 +46,7 @@ begin
 end;
 end;
 
-procedure Tliste_client.SearchBox2Change(Sender: TObject);
+procedure TfrmListClients.SearchBox2Change(Sender: TObject);
 begin
 if trim(searchbox2.Text) = '' then  db.ADOclient.Filtered := false else
 begin

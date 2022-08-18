@@ -5,10 +5,10 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.DBCtrls;
+  Vcl.DBCtrls,dmDatabase;
 
 type
-  Tclient_frm = class(TForm)
+  TfrmClient = class(TForm)
     Label8: TLabel;
     GroupBox1: TGroupBox;
     Label1: TLabel;
@@ -48,43 +48,43 @@ type
   end;
 
 var
-  client_frm: Tclient_frm;
+  frmClient: TfrmClient;
 
 implementation
-           uses database,liste_des_clients;
+           uses liste_des_clients;
 {$R *.dfm}
 
-procedure Tclient_frm.Button1Click(Sender: TObject);
+procedure TfrmClient.Button1Click(Sender: TObject);
 begin
 db.ADOclient.Next;
 end;
 
-procedure Tclient_frm.Button2Click(Sender: TObject);
+procedure TfrmClient.Button2Click(Sender: TObject);
 begin
 db.ADOclient.Prior;
 end;
 
-procedure Tclient_frm.Button3Click(Sender: TObject);
+procedure TfrmClient.Button3Click(Sender: TObject);
 begin
 db.ADOclient.First;
 end;
 
-procedure Tclient_frm.Button4Click(Sender: TObject);
+procedure TfrmClient.Button4Click(Sender: TObject);
 begin
 db.ADOclient.Last;
 end;
 
-procedure Tclient_frm.Button5Click(Sender: TObject);
+procedure TfrmClient.Button5Click(Sender: TObject);
 begin
 db.ADOclient.Insert;
 end;
 
-procedure Tclient_frm.Button6Click(Sender: TObject);
+procedure TfrmClient.Button6Click(Sender: TObject);
 begin
-client_frm.Close;
+frmClient.Close;
 end;
 
-procedure Tclient_frm.Button7Click(Sender: TObject);
+procedure TfrmClient.Button7Click(Sender: TObject);
 begin
 db.ADOclient.Post;
 end;

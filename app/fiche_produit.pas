@@ -6,17 +6,15 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ToolWin, Vcl.ComCtrls, Vcl.StdCtrls,
   Vcl.JumpList, Vcl.Tabs, Vcl.DockTabSet, Vcl.Grids, Vcl.TabNotBk, Vcl.Mask,
-  Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB;
+  Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB, Vcl.DBGrids,dmDatabase;
 
 type
-  Tproduit_frm = class(TForm)
+  TfrmProduit = class(TForm)
     Label1: TLabel;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     DBEdit1: TDBEdit;
-    DBEdit7: TDBEdit;
-    Label7: TLabel;
     DBEdit6: TDBEdit;
     Label6: TLabel;
     DBEdit5: TDBEdit;
@@ -28,8 +26,6 @@ type
     DBEdit2: TDBEdit;
     Label2: TLabel;
     Label8: TLabel;
-    DataSourceproduit: TDataSource;
-    DataSourceQueryProduit: TDataSource;
     GroupBox1: TGroupBox;
     Label9: TLabel;
     DBEdit8: TDBEdit;
@@ -38,9 +34,28 @@ type
     Label11: TLabel;
     DBEdit10: TDBEdit;
     Label12: TLabel;
-    DataSourcefournisseur: TDataSource;
     DBLookupComboBox1: TDBLookupComboBox;
     GroupBox2: TGroupBox;
+    Label13: TLabel;
+    DBEdit11: TDBEdit;
+    Label14: TLabel;
+    DBEdit12: TDBEdit;
+    Label15: TLabel;
+    DBEdit13: TDBEdit;
+    GroupBox3: TGroupBox;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    DBEdit14: TDBEdit;
+    DBEdit15: TDBEdit;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,10 +63,19 @@ type
   end;
 
 var
-  produit_frm: Tproduit_frm;
+  frmProduit: TfrmProduit;
 
 implementation
-        uses database;
+             uses fiche_fournisseur;
 {$R *.dfm}
+
+procedure TfrmProduit.Button2Click(Sender: TObject);
+begin
+       frmproduit.Close;
+end;
+procedure TfrmProduit.Button3Click(Sender: TObject);
+begin
+frmfournisseur.show;
+end;
 
 end.

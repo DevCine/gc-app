@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.DBCGrids;
+  Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.DBCGrids,dmDatabase;
 
 type
   Tliste_frnsr = class(TForm)
@@ -39,18 +39,18 @@ var
   liste_frnsr: Tliste_frnsr;
 
 implementation
-                uses fournisseur_u,database;
+                uses fiche_fournisseur;
 {$R *.dfm}
 
 procedure Tliste_frnsr.Button1Click(Sender: TObject);
 begin
-fournisseur_frm.Show;
+frmFournisseur.Show;
 db.adofournisseur.Insert;
 end;
 
 procedure Tliste_frnsr.Button2Click(Sender: TObject);
 begin
-fournisseur_frm.show;
+frmFournisseur.show;
 db.adofournisseur.Edit;
 end;
 

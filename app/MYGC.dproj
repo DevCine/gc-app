@@ -102,8 +102,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="fournisseur_u.pas">
-            <Form>fournisseur_frm</Form>
+        <DCCReference Include="fiche_fournisseur.pas">
+            <Form>frmFournisseur</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="liste_des_frnsr.pas">
@@ -111,20 +111,21 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="liste_des_clients.pas">
-            <Form>liste_client</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="database.pas">
-            <Form>db</Form>
+            <Form>frmListClients</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="fiche_client.pas">
-            <Form>client_frm</Form>
+            <Form>frmClient</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="fiche_produit.pas">
-            <Form>produit_frm</Form>
+            <Form>frmProduit</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="dmDatabase.pas">
+            <Form>db</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -963,8 +964,8 @@
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
