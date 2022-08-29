@@ -21,7 +21,6 @@ type
     Label2: TLabel;
     Label3: TLabel;
     SearchBox1: TSearchBox;
-    DataSourceFrnsr: TDataSource;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);

@@ -301,7 +301,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'code_f'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
@@ -310,7 +309,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'nom'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
@@ -319,7 +317,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'adresse_f'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 2
     end
   end
@@ -358,7 +355,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'tel_f'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 0
     end
     object DBEdit5: TDBEdit
@@ -367,7 +363,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'email_f'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 1
     end
   end
@@ -406,7 +401,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'sold_init_f'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 0
     end
     object DBEdit7: TDBEdit
@@ -415,7 +409,6 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'sold_fin_f'
-      DataSource = liste_frnsr.DataSourceFrnsr
       TabOrder = 1
     end
   end

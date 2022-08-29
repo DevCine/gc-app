@@ -43,6 +43,7 @@ type
     procedure Button5Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -89,6 +90,12 @@ end;
 procedure TfrmFournisseur.Button7Click(Sender: TObject);
 begin
 db.adofournisseur.Post;
+end;
+
+procedure TfrmFournisseur.Button8Click(Sender: TObject);
+begin
+if liste_frnsr.Showing   then
+showmessage('form is open');
 end;
 
 procedure TfrmFournisseur.GroupBox1Click(Sender: TObject);

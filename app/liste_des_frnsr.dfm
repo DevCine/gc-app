@@ -2,8 +2,8 @@ object liste_frnsr: Tliste_frnsr
   Left = 0
   Top = 0
   Caption = 'Liste des fournisseur'
-  ClientHeight = 775
-  ClientWidth = 1260
+  ClientHeight = 710
+  ClientWidth = 1178
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,8 +13,8 @@ object liste_frnsr: Tliste_frnsr
   PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
-    Left = 464
-    Top = 40
+    Left = 80
+    Top = 32
     Width = 263
     Height = 31
     Caption = 'Liste des Fournisseurs'
@@ -26,12 +26,11 @@ object liste_frnsr: Tliste_frnsr
     ParentFont = False
   end
   object DBGrid1: TDBGrid
-    Left = 0
+    Left = 24
     Top = 240
-    Width = 1041
-    Height = 537
+    Width = 993
+    Height = 441
     Align = alCustom
-    DataSource = DataSourceFrnsr
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -47,11 +46,13 @@ object liste_frnsr: Tliste_frnsr
       item
         Expanded = False
         FieldName = 'nom'
+        Width = 266
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'adresse_f'
+        Width = 265
         Visible = True
       end
       item
@@ -71,8 +72,8 @@ object liste_frnsr: Tliste_frnsr
       end>
   end
   object Button1: TButton
-    Left = 1104
-    Top = 280
+    Left = 1048
+    Top = 264
     Width = 75
     Height = 25
     Caption = 'Nouveau'
@@ -80,8 +81,8 @@ object liste_frnsr: Tliste_frnsr
     OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 1104
-    Top = 368
+    Left = 1048
+    Top = 352
     Width = 75
     Height = 25
     Caption = 'Modifier'
@@ -89,8 +90,8 @@ object liste_frnsr: Tliste_frnsr
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 1104
-    Top = 456
+    Left = 1048
+    Top = 440
     Width = 75
     Height = 25
     Caption = 'Supprimer'
@@ -98,8 +99,8 @@ object liste_frnsr: Tliste_frnsr
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 1104
-    Top = 552
+    Left = 1048
+    Top = 536
     Width = 75
     Height = 25
     Caption = 'Imprimer'
@@ -115,8 +116,8 @@ object liste_frnsr: Tliste_frnsr
     OnClick = Button5Click
   end
   object GroupBox1: TGroupBox
-    Left = 32
-    Top = 112
+    Left = 24
+    Top = 104
     Width = 753
     Height = 105
     Caption = 'Recherche par : '
@@ -163,10 +164,5 @@ object liste_frnsr: Tliste_frnsr
       TabOrder = 1
       OnChange = SearchBox1Change
     end
-  end
-  object DataSourceFrnsr: TDataSource
-    DataSet = db.ADOfournisseur
-    Left = 32
-    Top = 8
   end
 end

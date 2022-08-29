@@ -8,7 +8,7 @@ uses
   Data.Win.ADODB, Vcl.Grids, Vcl.DBGrids, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls,dmDatabase;
 
 type
-  TfrmListClients = class(TForm)
+  TfrmListeClients = class(TForm)
     Label1: TLabel;
     GroupBox1: TGroupBox;
     Label2: TLabel;
@@ -31,13 +31,13 @@ type
   end;
 
 var
-  frmListClients: TfrmListClients;
+  frmListeClients: TfrmListeClients;
 
 implementation
              uses fiche_fournisseur;
 {$R *.dfm}
 
-procedure TfrmListClients.SearchBox1Change(Sender: TObject);
+procedure TfrmListeClients.SearchBox1Change(Sender: TObject);
 begin
             if trim(searchbox1.Text) = '' then  db.ADOclient.Filtered := false else
 begin
@@ -46,7 +46,7 @@ begin
 end;
 end;
 
-procedure TfrmListClients.SearchBox2Change(Sender: TObject);
+procedure TfrmListeClients.SearchBox2Change(Sender: TObject);
 begin
 if trim(searchbox2.Text) = '' then  db.ADOclient.Filtered := false else
 begin

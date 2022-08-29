@@ -1,13 +1,13 @@
 ﻿object db: Tdb
-  Height = 594
-  Width = 699
+  Height = 649
+  Width = 1008
   PixelsPerInch = 120
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=bddcommerce;Data Source=DESKTOP-M9OQ1ML' +
-      '\SQLEXPRESS'
+      'fo=False;Initial Catalog=bddcommercial;Data Source=DESKTOP-M9OQ1' +
+      'ML\SQLEXPRESS'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 280
@@ -20,31 +20,6 @@
     TableName = 'fournisseur'
     Left = 184
     Top = 112
-    object ADOfournisseurcode_f: TIntegerField
-      FieldName = 'code_f'
-    end
-    object ADOfournisseurnom: TWideStringField
-      FieldName = 'nom'
-      Size = 50
-    end
-    object ADOfournisseuradresse_f: TWideStringField
-      FieldName = 'adresse_f'
-      Size = 50
-    end
-    object ADOfournisseurtel_f: TStringField
-      FieldName = 'tel_f'
-      Size = 21
-    end
-    object ADOfournisseuremail_f: TStringField
-      FieldName = 'email_f'
-      Size = 30
-    end
-    object ADOfournisseursold_init_f: TFloatField
-      FieldName = 'sold_init_f'
-    end
-    object ADOfournisseursold_fin_f: TFloatField
-      FieldName = 'sold_fin_f'
-    end
   end
   object ADOclient: TADOTable
     Active = True
@@ -53,8 +28,9 @@
     TableName = 'client'
     Left = 296
     Top = 112
-    object ADOclientcode_c: TIntegerField
+    object ADOclientcode_c: TStringField
       FieldName = 'code_c'
+      Size = 5
     end
     object ADOclientnom_c: TWideStringField
       FieldName = 'nom_c'
@@ -62,7 +38,7 @@
     end
     object ADOclientadresse_c: TWideStringField
       FieldName = 'adresse_c'
-      Size = 50
+      Size = 70
     end
     object ADOclienttel_c: TStringField
       FieldName = 'tel_c'
@@ -70,13 +46,10 @@
     end
     object ADOclientemail_c: TStringField
       FieldName = 'email_c'
-      Size = 30
+      Size = 70
     end
-    object ADOclientsold_init_c: TFloatField
-      FieldName = 'sold_init_c'
-    end
-    object ADOclientsold_fin_c: TFloatField
-      FieldName = 'sold_fin_c'
+    object ADOclientsold_c: TFloatField
+      FieldName = 'sold_c'
     end
   end
   object ADOstock: TADOTable
@@ -86,18 +59,6 @@
     TableName = 'stock'
     Left = 384
     Top = 104
-    object ADOstockcode_s: TIntegerField
-      FieldName = 'code_s'
-    end
-    object ADOstocks_initial: TIntegerField
-      FieldName = 's_initial'
-    end
-    object ADOstocks_actuel: TIntegerField
-      FieldName = 's_actuel'
-    end
-    object ADOstockalert: TIntegerField
-      FieldName = 'alert'
-    end
   end
   object ADOdetail_cmnd: TADOTable
     Active = True
@@ -106,30 +67,6 @@
     TableName = 'detail_cmnd'
     Left = 488
     Top = 104
-    object ADOdetail_cmndNumPiece_bc: TIntegerField
-      FieldName = 'NumPiece_bc'
-    end
-    object ADOdetail_cmndref: TIntegerField
-      FieldName = 'ref'
-    end
-    object ADOdetail_cmndqte_cmnd: TIntegerField
-      FieldName = 'qte_cmnd'
-    end
-    object ADOdetail_cmndprix_ht_cmnd: TFloatField
-      FieldName = 'prix_ht_cmnd'
-    end
-    object ADOdetail_cmndtva_cmnd: TFloatField
-      FieldName = 'tva_cmnd'
-    end
-    object ADOdetail_cmndremise_cmnd: TFloatField
-      FieldName = 'remise_cmnd'
-    end
-    object ADOdetail_cmndprix_ttc_cmnd: TFloatField
-      FieldName = 'prix_ttc_cmnd'
-    end
-    object ADOdetail_cmndréglé_cmnd: TBooleanField
-      FieldName = 'r'#233'gl'#233'_cmnd'
-    end
   end
   object ADOdetail_livr: TADOTable
     Active = True
@@ -138,33 +75,6 @@
     TableName = 'detail_livr'
     Left = 608
     Top = 104
-    object ADOdetail_livrnum_piece_bl: TIntegerField
-      FieldName = 'num_piece_bl'
-    end
-    object ADOdetail_livrref: TIntegerField
-      FieldName = 'ref'
-    end
-    object ADOdetail_livrqte_min: TIntegerField
-      FieldName = 'qte_min'
-    end
-    object ADOdetail_livrqte_max: TIntegerField
-      FieldName = 'qte_max'
-    end
-    object ADOdetail_livrprix_qte: TIntegerField
-      FieldName = 'prix_qte'
-    end
-    object ADOdetail_livrprix_ht_livr: TFloatField
-      FieldName = 'prix_ht_livr'
-    end
-    object ADOdetail_livrremise_livr: TFloatField
-      FieldName = 'remise_livr'
-    end
-    object ADOdetail_livrprix_ttc_livr: TFloatField
-      FieldName = 'prix_ttc_livr'
-    end
-    object ADOdetail_livrréglé_livr: TBooleanField
-      FieldName = 'r'#233'gl'#233'_livr'
-    end
   end
   object ADOproduit: TADOTable
     Active = True
@@ -173,8 +83,9 @@
     TableName = 'produit'
     Left = 24
     Top = 112
-    object ADOproduitref: TIntegerField
+    object ADOproduitref: TStringField
       FieldName = 'ref'
+      Size = 5
     end
     object ADOproduitcode_bare: TIntegerField
       FieldName = 'code_bare'
@@ -194,16 +105,77 @@
     object ADOproduitdate_produit: TDateTimeField
       FieldName = 'date_produit'
     end
-    object ADOproduitcode_s: TIntegerField
+    object ADOproduitcode_s: TStringField
       FieldName = 'code_s'
+      Size = 5
     end
   end
-  object DataSourceproduit: TDataSource
-    Left = 260
-    Top = 357
+  object dsProduit: TDataSource
+    DataSet = ADOproduit
+    Left = 292
+    Top = 293
   end
-  object DataSourcefournisseur: TDataSource
-    Left = 412
-    Top = 352
+  object dsFournisseur: TDataSource
+    DataSet = ADOfournisseur
+    Left = 160
+    Top = 288
+  end
+  object dsDetailCmnd: TDataSource
+    DataSet = ADOdetail_cmnd
+    Left = 456
+    Top = 288
+  end
+  object dsDetailLivr: TDataSource
+    DataSet = ADOdetail_livr
+    Left = 576
+    Top = 304
+  end
+  object dsStock: TDataSource
+    DataSet = ADOstock
+    Left = 696
+    Top = 288
+  end
+  object dsClient: TDataSource
+    DataSet = ADOclient
+    Left = 776
+    Top = 336
+  end
+  object ADObonLivr: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'bon_livraison'
+    Left = 704
+    Top = 128
+    object ADObonLivrnum_piece_bl: TStringField
+      FieldName = 'num_piece_bl'
+      Size = 6
+    end
+    object ADObonLivrdate_bl: TDateTimeField
+      FieldName = 'date_bl'
+    end
+    object ADObonLivrobservation: TWideStringField
+      FieldName = 'observation'
+      Size = 100
+    end
+    object ADObonLivrvalider_bl: TBooleanField
+      FieldName = 'valider_bl'
+    end
+    object ADObonLivrpiece_réglé_bl: TBooleanField
+      FieldName = 'piece_r'#233'gl'#233'_bl'
+    end
+    object ADObonLivrNpiece_vente: TStringField
+      FieldName = 'Npiece_vente'
+      Size = 6
+    end
+    object ADObonLivrcode_c: TStringField
+      FieldName = 'code_c'
+      Size = 5
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADObonLivr
+    Left = 320
+    Top = 432
   end
 end

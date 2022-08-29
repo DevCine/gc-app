@@ -1,4 +1,4 @@
-object frmListClients: TfrmListClients
+object frmListeClients: TfrmListeClients
   Left = 0
   Top = 0
   Caption = 'liste des clients'

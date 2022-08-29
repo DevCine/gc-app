@@ -34,7 +34,6 @@ type
     Label11: TLabel;
     DBEdit10: TDBEdit;
     Label12: TLabel;
-    DBLookupComboBox1: TDBLookupComboBox;
     GroupBox2: TGroupBox;
     Label13: TLabel;
     DBEdit11: TDBEdit;
@@ -54,8 +53,11 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    DBLookupComboBox1: TDBLookupComboBox;
+    TabSheet3: TTabSheet;
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,8 +68,14 @@ var
   frmProduit: TfrmProduit;
 
 implementation
-             uses fiche_fournisseur;
+             uses liste_des_frnsr;
 {$R *.dfm}
+
+procedure TfrmProduit.Button1Click(Sender: TObject);
+begin
+if frmproduit.Showing   then
+showmessage('form is open');
+end;
 
 procedure TfrmProduit.Button2Click(Sender: TObject);
 begin
@@ -75,7 +83,7 @@ begin
 end;
 procedure TfrmProduit.Button3Click(Sender: TObject);
 begin
-frmfournisseur.show;
+liste_frnsr.show;
 end;
 
 end.

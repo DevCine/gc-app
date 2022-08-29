@@ -96,7 +96,7 @@ object frmProduit: TfrmProduit
         Width = 329
         Height = 31
         DataField = 'ref'
-        DataSource = db.DataSourceproduit
+        DataSource = db.dsProduit
         TabOrder = 0
       end
       object DBEdit6: TDBEdit
@@ -105,7 +105,7 @@ object frmProduit: TfrmProduit
         Width = 145
         Height = 31
         DataField = 'date_produit'
-        DataSource = db.DataSourceproduit
+        DataSource = db.dsProduit
         TabOrder = 1
       end
       object DBEdit5: TDBEdit
@@ -114,7 +114,7 @@ object frmProduit: TfrmProduit
         Width = 329
         Height = 31
         DataField = 'marque'
-        DataSource = db.DataSourceproduit
+        DataSource = db.dsProduit
         TabOrder = 2
       end
       object DBEdit4: TDBEdit
@@ -123,7 +123,7 @@ object frmProduit: TfrmProduit
         Width = 329
         Height = 31
         DataField = 'famille'
-        DataSource = db.DataSourceproduit
+        DataSource = db.dsProduit
         TabOrder = 3
       end
       object DBEdit3: TDBEdit
@@ -132,7 +132,7 @@ object frmProduit: TfrmProduit
         Width = 329
         Height = 31
         DataField = 'code_bare'
-        DataSource = db.DataSourceproduit
+        DataSource = db.dsProduit
         TabOrder = 4
       end
       object DBEdit2: TDBEdit
@@ -141,7 +141,7 @@ object frmProduit: TfrmProduit
         Width = 329
         Height = 31
         DataField = 'd'#233'signation'
-        DataSource = db.DataSourceproduit
+        DataSource = db.dsProduit
         TabOrder = 5
       end
     end
@@ -192,6 +192,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'prix_ht_cmnd'
+          DataSource = db.dsDetailCmnd
           TabOrder = 0
         end
         object DBEdit9: TDBEdit
@@ -200,6 +201,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'tva_cmnd'
+          DataSource = db.dsDetailCmnd
           TabOrder = 1
         end
         object DBEdit10: TDBEdit
@@ -208,28 +210,27 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'prix_ttc_cmnd'
+          DataSource = db.dsDetailCmnd
           TabOrder = 2
+        end
+        object Button3: TButton
+          Left = 318
+          Top = 224
+          Width = 38
+          Height = 33
+          Caption = '+'
+          TabOrder = 3
+          OnClick = Button3Click
         end
         object DBLookupComboBox1: TDBLookupComboBox
           Left = 150
           Top = 224
           Width = 154
           Height = 31
-          DataField = 'nom'
-          DataSource = db.DataSourceproduit
           KeyField = 'nom'
           ListField = 'nom'
-          ListSource = db.DataSourceproduit
-          TabOrder = 3
-        end
-        object Button3: TButton
-          Left = 323
-          Top = 224
-          Width = 38
-          Height = 33
-          Caption = '+'
+          ListSource = db.dsFournisseur
           TabOrder = 4
-          OnClick = Button3Click
         end
       end
       object GroupBox2: TGroupBox
@@ -257,7 +258,7 @@ object frmProduit: TfrmProduit
         end
         object Label15: TLabel
           Left = 64
-          Top = 184
+          Top = 176
           Width = 45
           Height = 23
           Caption = 'Alert :'
@@ -269,6 +270,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 's_initial'
+          DataSource = db.dsStock
           TabOrder = 0
         end
         object DBEdit12: TDBEdit
@@ -277,6 +279,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 's_actuel'
+          DataSource = db.dsStock
           TabOrder = 1
         end
         object DBEdit13: TDBEdit
@@ -285,6 +288,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'alert'
+          DataSource = db.dsStock
           TabOrder = 2
         end
       end
@@ -336,6 +340,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'prix_ht_livr'
+          DataSource = db.dsDetailLivr
           TabOrder = 0
         end
         object DBEdit15: TDBEdit
@@ -344,6 +349,7 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'prix_ttc_livr'
+          DataSource = db.dsDetailLivr
           TabOrder = 1
         end
         object Edit1: TEdit
@@ -355,6 +361,10 @@ object frmProduit: TfrmProduit
         end
       end
     end
+    object TabSheet3: TTabSheet
+      Caption = 'Observation'
+      ImageIndex = 2
+    end
   end
   object Button1: TButton
     Left = 960
@@ -363,6 +373,7 @@ object frmProduit: TfrmProduit
     Height = 25
     Caption = 'sauver'
     TabOrder = 1
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 960
