@@ -46,6 +46,7 @@ object frmListeProduits: TfrmListeProduits
     Height = 25
     Caption = 'Nouveau'
     TabOrder = 1
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 917
@@ -62,6 +63,7 @@ object frmListeProduits: TfrmListeProduits
     Height = 25
     Caption = 'Supprimer'
     TabOrder = 3
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 917

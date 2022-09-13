@@ -1,4 +1,4 @@
-object Form1: TForm1
+object frmComptoire: TfrmComptoire
   Left = 0
   Top = 0
   Caption = 'Vente au Comptoire'

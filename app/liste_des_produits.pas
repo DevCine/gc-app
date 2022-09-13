@@ -22,6 +22,8 @@ type
     ComboBox1: TComboBox;
     procedure SearchBox2Change(Sender: TObject);
     procedure SearchBox1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,10 +32,59 @@ type
 
 var
   frmListeProduits: TfrmListeProduits;
-
+    autoNumP:integer;
 implementation
 
-{$R *.dfm}
+{$R *.dfm}      uses fiche_produit;
+
+procedure TfrmListeProduits.Button1Click(Sender: TObject);
+var i:integer; idProduit:string; br:boolean;
+begin
+//autoNumP := 1;
+     i:=1;    br := false  ;
+ idProduit := 'P000';
+frmProduit.show ;
+with db do
+begin //ADOproduit.Insert;
+//ADOdetail_cmnd.Insert;
+//adodetail_livr.Insert;
+//adostock.Insert;
+end;
+
+  db.ADOproduit.DisableControls;
+  try
+    db.ADOproduit.First;
+    repeat
+       if db.ADOproduit.Fields[0].asString =  idProduit+inttostr(i)then
+       begin
+               i:=i+1;
+               if i>9 then delete(idproduit,4,1) else if i>99 then delete(idproduit,3,2)
+               else if i>999 then delete(idproduit,2,3)  ;
+               db.ADOproduit.Next;
+       end
+       else
+      begin
+      db.ADOproduit.Insert;
+               frmProduit.DBEdit1.Field.Value:= idProduit+inttostr(i) ;
+               br := true
+      end;
+
+    until (db.ADOproduit.EOF) or (br);
+
+  finally
+    db.ADOproduit.EnableControls;
+  end;
+
+if not br then
+db.ADOproduit.Insert;
+        frmProduit.DBEdit1.Field.Value:= idProduit+inttostr(i+1) ;
+
+end;
+
+procedure TfrmListeProduits.Button3Click(Sender: TObject);
+begin
+db.ADOproduit.Delete;
+end;
 
 procedure TfrmListeProduits.SearchBox1Change(Sender: TObject);
 begin

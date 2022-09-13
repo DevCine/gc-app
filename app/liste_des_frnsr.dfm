@@ -1,4 +1,4 @@
-object liste_frnsr: Tliste_frnsr
+object frmListeFrnsr: TfrmListeFrnsr
   Left = 0
   Top = 0
   Caption = 'Liste des fournisseur'

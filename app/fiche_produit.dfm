@@ -30,7 +30,7 @@ object frmProduit: TfrmProduit
     Top = 94
     Width = 865
     Height = 657
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17

@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.WinXCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.DBCGrids,dmDatabase;
 
 type
-  Tliste_frnsr = class(TForm)
+  TfrmListeFrnsr = class(TForm)
     DBGrid1: TDBGrid;
     SearchBox2: TSearchBox;
     Button1: TButton;
@@ -35,36 +35,36 @@ type
   end;
 
 var
-  liste_frnsr: Tliste_frnsr;
+  frmListeFrnsr: TfrmListeFrnsr;
 
 implementation
                 uses fiche_fournisseur;
 {$R *.dfm}
 
-procedure Tliste_frnsr.Button1Click(Sender: TObject);
+procedure TfrmListeFrnsr.Button1Click(Sender: TObject);
 begin
 frmFournisseur.Show;
 db.adofournisseur.Insert;
 end;
 
-procedure Tliste_frnsr.Button2Click(Sender: TObject);
+procedure TfrmListeFrnsr.Button2Click(Sender: TObject);
 begin
 frmFournisseur.show;
 db.adofournisseur.Edit;
 end;
 
-procedure Tliste_frnsr.Button3Click(Sender: TObject);
+procedure TfrmListeFrnsr.Button3Click(Sender: TObject);
 begin
 db.adofournisseur.Delete;
 end;
 
-procedure Tliste_frnsr.Button5Click(Sender: TObject);
+procedure TfrmListeFrnsr.Button5Click(Sender: TObject);
 begin
-liste_frnsr.Close;
+frmListefrnsr.Close;
 end;
 
 
-procedure Tliste_frnsr.SearchBox1Change(Sender: TObject);
+procedure TfrmListeFrnsr.SearchBox1Change(Sender: TObject);
 begin
 if trim(searchbox1.Text) = '' then  db.ADOfournisseur.Filtered := false else
 begin
@@ -73,7 +73,7 @@ begin
 end;
 end;
 
-procedure Tliste_frnsr.SearchBox2Change(Sender: TObject);
+procedure TfrmListeFrnsr.SearchBox2Change(Sender: TObject);
 begin
 if trim(searchbox2.Text) = '' then  db.ADOfournisseur.Filtered := false else
 begin

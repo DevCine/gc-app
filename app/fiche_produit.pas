@@ -73,8 +73,7 @@ implementation
 
 procedure TfrmProduit.Button1Click(Sender: TObject);
 begin
-if frmproduit.Showing   then
-showmessage('form is open');
+db.ADOproduit.Post;
 end;
 
 procedure TfrmProduit.Button2Click(Sender: TObject);
@@ -83,7 +82,7 @@ begin
 end;
 procedure TfrmProduit.Button3Click(Sender: TObject);
 begin
-liste_frnsr.show;
+frmlistefrnsr.show;
 end;
 
 end.

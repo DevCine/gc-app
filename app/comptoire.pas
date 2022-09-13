@@ -8,7 +8,7 @@ uses
   Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls,dmdatabase, Vcl.Mask;
 
 type
-  TForm1 = class(TForm)
+  TfrmComptoire = class(TForm)
     Panel1: TPanel;
     DBGrid1: TDBGrid;
     Panel2: TPanel;
@@ -36,7 +36,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmComptoire: TfrmComptoire;
 
 implementation
 
