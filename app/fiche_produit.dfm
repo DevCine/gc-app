@@ -30,7 +30,7 @@ object frmProduit: TfrmProduit
     Top = 94
     Width = 865
     Height = 657
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -254,7 +254,6 @@ object frmProduit: TfrmProduit
           Width = 57
           Height = 23
           Caption = 'Actuel :'
-          FocusControl = DBEdit12
         end
         object Label15: TLabel
           Left = 64
@@ -262,34 +261,32 @@ object frmProduit: TfrmProduit
           Width = 45
           Height = 23
           Caption = 'Alert :'
-          FocusControl = DBEdit13
         end
         object DBEdit11: TDBEdit
           Left = 160
           Top = 55
           Width = 154
           Height = 31
-          DataField = 's_initial'
-          DataSource = db.dsStock
+          DataField = 'qte_cmnd'
+          DataSource = db.dsDetailCmnd
           TabOrder = 0
         end
-        object DBEdit12: TDBEdit
+        object Edit2: TEdit
           Left = 160
-          Top = 114
-          Width = 154
+          Top = 111
+          Width = 153
           Height = 31
-          DataField = 's_actuel'
-          DataSource = db.dsStock
           TabOrder = 1
         end
-        object DBEdit13: TDBEdit
+        object SpinEdit1: TSpinEdit
           Left = 160
           Top = 176
-          Width = 154
-          Height = 31
-          DataField = 'alert'
-          DataSource = db.dsStock
+          Width = 81
+          Height = 34
+          MaxValue = 0
+          MinValue = 0
           TabOrder = 2
+          Value = 0
         end
       end
       object GroupBox3: TGroupBox

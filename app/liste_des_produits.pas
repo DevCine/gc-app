@@ -37,20 +37,16 @@ implementation
 
 {$R *.dfm}      uses fiche_produit;
 
-procedure TfrmListeProduits.Button1Click(Sender: TObject);
-var i:integer; idProduit:string; br:boolean;
-begin
-//autoNumP := 1;
-     i:=1;    br := false  ;
- idProduit := 'P000';
-frmProduit.show ;
-with db do
-begin //ADOproduit.Insert;
-//ADOdetail_cmnd.Insert;
-//adodetail_livr.Insert;
-//adostock.Insert;
-end;
 
+procedure TfrmListeProduits.Button1Click(Sender: TObject);
+var i:integer; idProduit,idDetailCmnd,idDetailLivr:string; p,dc,dl:boolean;
+begin
+
+     i:=1;  p := false; dc:= false; dl:= false ;
+ idProduit := 'P000';  idDetailCmnd:='DC000'; idDetailLivr := 'DL000' ;
+frmProduit.show ;
+
+   //////////// autoincrementation of product id ////////////////
   db.ADOproduit.DisableControls;
   try
     db.ADOproduit.First;
@@ -66,19 +62,82 @@ end;
       begin
       db.ADOproduit.Insert;
                frmProduit.DBEdit1.Field.Value:= idProduit+inttostr(i) ;
-               br := true
+               p := true
       end;
 
-    until (db.ADOproduit.EOF) or (br);
+    until (i=db.ADOproduit.RecordCount+1) or (p =true);
 
   finally
     db.ADOproduit.EnableControls;
   end;
 
-if not br then
+if  p =false then
+begin
 db.ADOproduit.Insert;
-        frmProduit.DBEdit1.Field.Value:= idProduit+inttostr(i+1) ;
+        frmProduit.DBEdit1.Field.Value:= idProduit+inttostr(i) ;
+ end;
+ /////////////////////////////////////////////////////////////////////////
+ //////////// incrementation detail commande id /////////////////////////
+                     i:=1;         db.adodetail_cmnd.DisableControls;
+  try
+    db.adodetail_cmnd.First;
+    repeat
+       if db.adodetail_cmnd.Fields[0].asString =  idDetailCmnd+inttostr(i)then
+       begin
+               i:=i+1;
+               if i>9 then delete(idDetailCmnd,5,1) else if i>99 then delete(idDetailCmnd,4,2)
+               else if i>999 then delete(idDetailCmnd,3,3)  ;
+               db.adodetail_cmnd.Next;
+       end
+       else
+      begin
+      db.adodetail_cmnd.Insert;
+               db.adodetail_cmnd.Fields[0].asString:= idDetailCmnd+inttostr(i) ;
+               dl := true
+      end;
 
+    until (i=db.adodetail_cmnd.RecordCount+1) or (dl =true);
+
+  finally
+    db.adodetail_cmnd.EnableControls;
+  end;
+
+if  dl =false then
+begin
+db.adodetail_cmnd.Insert;
+        db.adodetail_cmnd.Fields[0].asString:= idDetailCmnd+inttostr(i) ;
+end;
+ /////////////////////////////////////////////////////////////////////////
+ //////////// incrementation detail commande id /////////////////////////
+                     i:=1;         db.adodetail_livr.DisableControls;
+  try
+    db.adodetail_livr.First;
+    repeat
+       if db.adodetail_livr.Fields[0].asString =  idDetailLivr+inttostr(i)then
+       begin
+               i:=i+1;
+               if i>9 then delete(idDetailLivr,5,1) else if i>99 then delete(idDetailLivr,4,2)
+               else if i>999 then delete(idDetailLivr,3,3)  ;
+               db.adodetail_livr.Next;
+       end
+       else
+      begin
+      db.adodetail_livr.Insert;
+               db.adodetail_livr.Fields[0].asString:= idDetailLivr+inttostr(i) ;
+               dc := true
+      end;
+
+    until (i=db.adodetail_livr.RecordCount+1) or (dc =true);
+
+  finally
+    db.adodetail_livr.EnableControls;
+  end;
+
+if  dc =false then
+begin
+db.adodetail_livr.Insert;
+        db.adodetail_livr.Fields[0].asString:= idDetailLivr+inttostr(i) ;
+end;
 end;
 
 procedure TfrmListeProduits.Button3Click(Sender: TObject);

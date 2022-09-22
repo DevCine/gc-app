@@ -103,3 +103,44 @@ réglé_livr bit,
 constraint pk_detail_livr primary key (num_piece_bl,ref),
 constraint fk_livraison foreign key (num_piece_bl) references bon_livraison(num_piece_bl),
 constraint fk_produit_livr foreign key (ref) references produit(ref))
+
+sp_rename 'bon_commande.NumPiece_bc', 'code_cmnd', 'COLUMN';
+sp_rename 'detail_cmnd.NumPiece_bc', 'code_cmnd', 'COLUMN';
+alter table detail_cmnd
+drop constraint pk_detail_cmnd,constraint fk_cmnd
+alter table detail_cmnd
+add constraint pk_detail_cmnd primary key (code_cmnd,ref),
+constraint fk_cmnd foreign key (code_cmnd) references bon_commande(code_cmnd)
+sp_rename 'bon_livraison.num_piece_bl', 'code_bl', 'COLUMN';
+sp_rename 'detail_livr.num_piece_bl', 'code_bl', 'COLUMN';
+alter table detail_livr
+drop constraint pk_detail_livr, constraint fk_livraison
+alter table detail_livr
+add constraint pk_detail_livr primary key (code_bl,ref),
+constraint fk_livraison foreign key (code_bl) references bon_livraison(code_bl)
+alter table bon_commande
+add NumPiece_bc varchar(6)
+alter table bon_livraison
+add NumPiece_bl varchar(6)
+alter table produit
+drop constraint FK__produit__code_s__239E4DCF
+ alter table produit
+ drop column code_s
+ drop table stock
+ delete from detail_cmnd
+ alter table detail_cmnd
+ drop pk_detail_cmnd
+ alter table detail_cmnd
+ alter column code_cmnd varchar(6) null
+  alter table detail_cmnd
+ alter column ref varchar(5) null
+ alter table detail_cmnd 
+ add idDetailCmnd varchar(6) primary key not null;
+ alter table detail_livr
+ drop pk_detail_livr
+ alter table detail_livr
+ alter column code_bl varchar(6) null
+ alter table detail_livr
+ alter column ref varchar(5) null;
+ alter table detail_livr
+ add idDetailLivr varchar(6) primary key not null;

@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ToolWin, Vcl.ComCtrls, Vcl.StdCtrls,
   Vcl.JumpList, Vcl.Tabs, Vcl.DockTabSet, Vcl.Grids, Vcl.TabNotBk, Vcl.Mask,
-  Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB, Vcl.DBGrids,dmDatabase;
+  Vcl.ExtCtrls, Vcl.DBCtrls, Data.DB, Vcl.DBGrids,dmDatabase, Vcl.Samples.Spin;
 
 type
   TfrmProduit = class(TForm)
@@ -38,9 +38,7 @@ type
     Label13: TLabel;
     DBEdit11: TDBEdit;
     Label14: TLabel;
-    DBEdit12: TDBEdit;
     Label15: TLabel;
-    DBEdit13: TDBEdit;
     GroupBox3: TGroupBox;
     Label16: TLabel;
     Label17: TLabel;
@@ -55,6 +53,8 @@ type
     Button3: TButton;
     DBLookupComboBox1: TDBLookupComboBox;
     TabSheet3: TTabSheet;
+    Edit2: TEdit;
+    SpinEdit1: TSpinEdit;
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -74,6 +74,13 @@ implementation
 procedure TfrmProduit.Button1Click(Sender: TObject);
 begin
 db.ADOproduit.Post;
+db.ADOdetail_cmnd.Post;
+db.ADOdetail_livr.Post;
+
+///// trie le dbgrid produit par reference /////
+db.ADOproduit.IndexFieldNames :='ref';
+db.ADOdetail_cmnd.IndexFieldNames := 'idDetailCmnd';
+db.ADOdetail_livr.IndexFieldNames :='idDetailLivr';
 end;
 
 procedure TfrmProduit.Button2Click(Sender: TObject);

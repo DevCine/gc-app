@@ -31,7 +31,7 @@ object frmListeProduits: TfrmListeProduits
     Width = 841
     Height = 449
     Align = alCustom
-    DataSource = db.dsProduit
+    DataSource = db.dsDetailLivr
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

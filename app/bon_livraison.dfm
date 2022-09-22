@@ -79,7 +79,7 @@ object Form2: TForm2
     Top = 263
     Width = 1028
     Height = 314
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'Pi'#232'ce info'
