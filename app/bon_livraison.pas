@@ -15,7 +15,6 @@ type
     DBLookupComboBox1: TDBLookupComboBox;
     Label2: TLabel;
     Button1: TButton;
-    DBText1: TDBText;
     Label3: TLabel;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;

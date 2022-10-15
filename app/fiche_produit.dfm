@@ -10,6 +10,8 @@ object frmProduit: TfrmProduit
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnClose = FormClose
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 15
   object Label1: TLabel
@@ -30,7 +32,7 @@ object frmProduit: TfrmProduit
     Top = 94
     Width = 865
     Height = 657
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -17
@@ -104,7 +106,7 @@ object frmProduit: TfrmProduit
         Top = 352
         Width = 145
         Height = 31
-        DataField = 'date_produit'
+        DataField = 'date_p'
         DataSource = db.dsProduit
         TabOrder = 1
       end
@@ -191,7 +193,7 @@ object frmProduit: TfrmProduit
           Top = 55
           Width = 154
           Height = 31
-          DataField = 'prix_ht_cmnd'
+          DataField = 'prixAchat'
           DataSource = db.dsDetailCmnd
           TabOrder = 0
         end
@@ -201,7 +203,6 @@ object frmProduit: TfrmProduit
           Width = 154
           Height = 31
           DataField = 'tva_cmnd'
-          DataSource = db.dsDetailCmnd
           TabOrder = 1
         end
         object DBEdit10: TDBEdit
@@ -209,7 +210,6 @@ object frmProduit: TfrmProduit
           Top = 167
           Width = 154
           Height = 31
-          DataField = 'prix_ttc_cmnd'
           DataSource = db.dsDetailCmnd
           TabOrder = 2
         end
@@ -336,8 +336,8 @@ object frmProduit: TfrmProduit
           Top = 104
           Width = 154
           Height = 31
-          DataField = 'prix_ht_livr'
-          DataSource = db.dsDetailLivr
+          DataField = 'prixVente'
+          DataSource = db.dsDetailCmnd
           TabOrder = 0
         end
         object DBEdit15: TDBEdit
@@ -345,8 +345,7 @@ object frmProduit: TfrmProduit
           Top = 104
           Width = 154
           Height = 31
-          DataField = 'prix_ttc_livr'
-          DataSource = db.dsDetailLivr
+          DataSource = db.dsDetailCmnd
           TabOrder = 1
         end
         object Edit1: TEdit
@@ -365,7 +364,7 @@ object frmProduit: TfrmProduit
   end
   object Button1: TButton
     Left = 960
-    Top = 272
+    Top = 316
     Width = 75
     Height = 25
     Caption = 'sauver'
@@ -380,5 +379,14 @@ object frmProduit: TfrmProduit
     Caption = 'fermer'
     TabOrder = 2
     OnClick = Button2Click
+  end
+  object Button4: TButton
+    Left = 960
+    Top = 255
+    Width = 75
+    Height = 25
+    Caption = 'Nouveau'
+    TabOrder = 3
+    OnClick = Button4Click
   end
 end

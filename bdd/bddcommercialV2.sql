@@ -144,3 +144,29 @@ drop constraint FK__produit__code_s__239E4DCF
  alter column ref varchar(5) null;
  alter table detail_livr
  add idDetailLivr varchar(6) primary key not null;
+ delete from produit
+ delete from bon_commande
+ delete from bon_livraison
+ delete from detail_cmnd
+ delete from detail_livr
+ delete from fournisseur
+ delete from client
+ alter table detail_cmnd
+ add prix_ttc_vente real, remise_vente real
+ alter table detail_cmnd
+ drop constraint fk_cmnd,constraint fk_produit
+ alter table detail_cmnd
+ drop column code_cmnd 
+ alter table detail_cmnd
+ drop column ref
+ delete from detail_cmnd
+ alter table detail_cmnd
+ add code_cmnd varchar(6) not null
+ alter table detail_cmnd
+ add ref varchar(5) not null
+ alter table detail_cmnd
+add constraint pk_detail_cmnd primary key (code_cmnd,ref),
+constraint fk_cmnd foreign key (code_cmnd) references bon_commande(code_cmnd),
+constraint fk_produit foreign key (ref) references produit(ref)
+alter table detail_cmnd
+alter column iDdetailCmnd varchar(6) null

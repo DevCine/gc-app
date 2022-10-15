@@ -11,7 +11,8 @@ uses
   liste_des_produits in 'liste_des_produits.pas' {frmListeProduits},
   comptoire in 'comptoire.pas' {frmComptoire},
   bon_livraison in 'bon_livraison.pas' {Form2},
-  mainMenu in 'mainMenu.pas' {frmMain};
+  mainMenu in 'mainMenu.pas' {frmMain},
+  bon_commande in 'bon_commande.pas' {frmBonCmnd};
 
 {$R *.res}
 
@@ -28,5 +29,6 @@ begin
   Application.CreateForm(Tdb, db);
   Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmBonCmnd, frmBonCmnd);
   Application.Run;
 end.

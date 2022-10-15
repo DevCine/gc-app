@@ -10,6 +10,7 @@ object frmFournisseur: TfrmFournisseur
   Font.Height = -15
   Font.Name = 'Times New Roman'
   Font.Style = [fsBold]
+  OnShow = FormShow
   PixelsPerInch = 96
   DesignSize = (
     985
@@ -301,6 +302,7 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'code_f'
+      DataSource = db.dsFournisseur
       TabOrder = 0
     end
     object DBEdit2: TDBEdit
@@ -309,6 +311,7 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'nom'
+      DataSource = db.dsFournisseur
       TabOrder = 1
     end
     object DBEdit3: TDBEdit
@@ -317,6 +320,7 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'adresse_f'
+      DataSource = db.dsFournisseur
       TabOrder = 2
     end
   end
@@ -355,6 +359,7 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'tel_f'
+      DataSource = db.dsFournisseur
       TabOrder = 0
     end
     object DBEdit5: TDBEdit
@@ -363,6 +368,7 @@ object frmFournisseur: TfrmFournisseur
       Width = 225
       Height = 25
       DataField = 'email_f'
+      DataSource = db.dsFournisseur
       TabOrder = 1
     end
   end
@@ -393,22 +399,21 @@ object frmFournisseur: TfrmFournisseur
       Width = 84
       Height = 17
       Caption = 'Solde finale :'
-      FocusControl = DBEdit7
     end
     object DBEdit6: TDBEdit
       Left = 144
       Top = 52
       Width = 225
       Height = 25
-      DataField = 'sold_init_f'
+      DataField = 'solde_f'
+      DataSource = db.dsFournisseur
       TabOrder = 0
     end
-    object DBEdit7: TDBEdit
+    object Edit1: TEdit
       Left = 144
-      Top = 106
+      Top = 104
       Width = 225
       Height = 25
-      DataField = 'sold_fin_f'
       TabOrder = 1
     end
   end

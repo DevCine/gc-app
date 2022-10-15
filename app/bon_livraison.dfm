@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 0
   Caption = 'Bon de Livraison'
   ClientHeight = 769
-  ClientWidth = 1336
+  ClientWidth = 1353
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -39,14 +39,6 @@ object Form2: TForm2
       Height = 15
       Caption = 'Client'
     end
-    object DBText1: TDBText
-      Left = 520
-      Top = 36
-      Width = 65
-      Height = 17
-      DataField = 'sold_c'
-      DataSource = db.dsClient
-    end
     object Label3: TLabel
       Left = 416
       Top = 36
@@ -79,7 +71,7 @@ object Form2: TForm2
     Top = 263
     Width = 1028
     Height = 314
-    ActivePage = TabSheet2
+    ActivePage = TabSheet1
     TabOrder = 1
     object TabSheet1: TTabSheet
       Caption = 'Pi'#232'ce info'
@@ -170,14 +162,12 @@ object Form2: TForm2
         Height = 284
         Align = alClient
         DataField = 'observation'
-        DataSource = db.DataSource1
         Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
         TabOrder = 0
-        ExplicitHeight = 305
       end
     end
   end
@@ -316,7 +306,6 @@ object Form2: TForm2
     Height = 17
     Caption = 'valider'
     DataField = 'valider_bl'
-    DataSource = db.DataSource1
     TabOrder = 7
   end
   object Panel2: TPanel

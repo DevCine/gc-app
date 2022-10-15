@@ -31,6 +31,7 @@ object frmListeFrnsr: TfrmListeFrnsr
     Width = 993
     Height = 441
     Align = alCustom
+    DataSource = db.dsFournisseur
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -46,13 +47,11 @@ object frmListeFrnsr: TfrmListeFrnsr
       item
         Expanded = False
         FieldName = 'nom'
-        Width = 266
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'adresse_f'
-        Width = 265
         Visible = True
       end
       item
@@ -67,7 +66,7 @@ object frmListeFrnsr: TfrmListeFrnsr
       end
       item
         Expanded = False
-        FieldName = 'sold_fin_f'
+        FieldName = 'solde_f'
         Visible = True
       end>
   end

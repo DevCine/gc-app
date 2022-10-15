@@ -2,8 +2,8 @@ object frmListeProduits: TfrmListeProduits
   Left = 0
   Top = 0
   Caption = 'Liste des Produits'
-  ClientHeight = 793
-  ClientWidth = 1088
+  ClientHeight = 741
+  ClientWidth = 1380
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -31,13 +31,44 @@ object frmListeProduits: TfrmListeProduits
     Width = 841
     Height = 449
     Align = alCustom
-    DataSource = db.dsDetailLivr
+    DataSource = db.dsQproduit
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ref'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'd'#233'signation'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'famille'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'marque'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'qte_cmnd'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'prixAchat'
+        Visible = True
+      end>
   end
   object Button1: TButton
     Left = 917
@@ -58,7 +89,7 @@ object frmListeProduits: TfrmListeProduits
   end
   object Button3: TButton
     Left = 917
-    Top = 472
+    Top = 456
     Width = 75
     Height = 25
     Caption = 'Supprimer'
@@ -67,7 +98,7 @@ object frmListeProduits: TfrmListeProduits
   end
   object Button4: TButton
     Left = 917
-    Top = 568
+    Top = 520
     Width = 75
     Height = 25
     Caption = 'Imprimer'
@@ -76,7 +107,7 @@ object frmListeProduits: TfrmListeProduits
   object GroupBox1: TGroupBox
     Left = 24
     Top = 112
-    Width = 968
+    Width = 841
     Height = 105
     Caption = 'Recherche par : '
     TabOrder = 5
@@ -122,5 +153,14 @@ object frmListeProduits: TfrmListeProduits
         'famille'
         'marque')
     end
+  end
+  object Button5: TButton
+    Left = 917
+    Top = 584
+    Width = 75
+    Height = 25
+    Caption = 'Fermer'
+    TabOrder = 6
+    OnClick = Button5Click
   end
 end
